@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="jumbotron text-center">
+    <h3>Yazilim Bloguna Hosgeldiniz</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt odio eius porro.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nemo tenetur ipsam? Quaerat aliquam accusantium quasi expedita, est laborum quisquam.</p>
+</div>
+<p>
+    {% if request.user.is_authenticated %}
+        Logged In, {{request.user.username}}
+    {% else  %}
+        Didn't Log in 
+    {% endif %}
+</p>
+
+{% endblock body %}
